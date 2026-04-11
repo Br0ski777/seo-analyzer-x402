@@ -1,6 +1,6 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.br0ski777/seo-analyzer",
+  "name": "io.github.Br0ski777/seo-analyzer",
   "title": "SEO Page Analyzer",
   "description": "SEO audit of any URL: meta tags, headings, links, images, schema, score 0-100. x402 payments.",
   "version": "1.0.0",
