@@ -2,9 +2,22 @@
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
   "name": "io.github.br0ski777/seo-analyzer",
   "title": "SEO Page Analyzer",
-  "description": "Complete SEO audit of any URL. Extracts title, meta description, OG tags, Twitter Card, headings, links, images alt text, Schema.org, word count, load time, and returns a score 0-100 with prioritized issues. Use for SEO audits, on-page analysis, or pre-publish checks.",
+  "description": "SEO audit of any URL: meta tags, headings, links, images, schema, score 0-100. x402 payments.",
   "version": "1.0.0",
   "websiteUrl": "https://github.com/Br0ski777/seo-analyzer-x402",
-  "repository": { "url": "https://github.com/Br0ski777/seo-analyzer-x402", "source": "github" },
-  "packages": [{ "registryType": "npm", "identifier": "@br0ski777/seo-analyzer-mcp", "version": "1.0.0", "runtimeHint": "npx", "transport": { "type": "stdio" } }]
+  "repository": {
+    "url": "https://github.com/Br0ski777/seo-analyzer-x402",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@br0ski777/seo-analyzer-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "npx",
+      "transport": {
+        "type": "stdio"
+      }
+    }
+  ]
 }
