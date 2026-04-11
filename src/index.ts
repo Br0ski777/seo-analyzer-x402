@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
-import { WALLET_ADDRESS, DEFAULT_NETWORK, DEFAULT_FACILITATOR, healthResponse, buildPaymentConfig } from "../../../packages/shared";
+import { WALLET_ADDRESS, DEFAULT_NETWORK, DEFAULT_FACILITATOR, healthResponse, buildPaymentConfig } from "./shared";
 import { API_CONFIG } from "./config";
 import { registerRoutes } from "./logic";
 
