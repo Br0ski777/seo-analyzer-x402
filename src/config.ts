@@ -38,6 +38,42 @@ Do NOT use for content extraction -- use web_scrape_to_markdown instead. Do NOT 
         },
         required: ["url"],
       },
+      outputSchema: {
+        type: "object",
+        properties: {
+          url: { type: "string", description: "URL audited" },
+          status_code: { type: "number", description: "HTTP status code" },
+          title: { type: "string", description: "Page title" },
+          description: { type: "string", description: "Meta description" },
+          canonical: { type: "string", description: "Canonical URL" },
+          robots_meta: { type: "string", description: "Robots meta tag content" },
+          og: { type: "object", description: "Open Graph tags (og:title, og:image, og:description)" },
+          twitter: { type: "object", description: "Twitter card meta tags" },
+          h1: { type: "array", items: { type: "string" }, description: "H1 headings" },
+          h2: { type: "array", items: { type: "string" }, description: "H2 headings" },
+          links: {
+            type: "object",
+            properties: {
+              internal: { type: "number", description: "Internal link count" },
+              external: { type: "number", description: "External link count" },
+            },
+          },
+          images: {
+            type: "object",
+            properties: {
+              total: { type: "number", description: "Total image count" },
+              without_alt: { type: "number", description: "Images missing alt text" },
+            },
+          },
+          word_count: { type: "number", description: "Total word count" },
+          lang: { type: "string", description: "Page language" },
+          schema_types: { type: "array", items: { type: "string" }, description: "Schema.org types detected" },
+          load_time_ms: { type: "number", description: "Page load time in milliseconds" },
+          seo_score: { type: "number", description: "SEO score 0-100" },
+          issues: { type: "array", items: { type: "string" }, description: "Prioritized SEO issues" },
+        },
+        required: ["url", "seo_score", "issues"],
+      },
     },
     {
       method: "POST",
@@ -61,6 +97,20 @@ Do NOT use for single URLs -- use seo_audit_page instead. Do NOT use for content
           urls: { type: "array", items: { type: "string" }, description: "Array of URLs (max 10)" },
         },
         required: ["urls"],
+      },
+      outputSchema: {
+        type: "array",
+        description: "Array of SEO audit results, one per URL",
+        items: {
+          type: "object",
+          properties: {
+            url: { type: "string" },
+            seo_score: { type: "number" },
+            title: { type: "string" },
+            issues: { type: "array", items: { type: "string" } },
+            status: { type: "string", description: "fulfilled or rejected" },
+          },
+        },
       },
     },
   ],
