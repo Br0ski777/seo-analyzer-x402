@@ -35,8 +35,8 @@ Any x402-aware client ([`@x402/fetch`](https://www.npmjs.com/package/@x402/fetch
 
 | Tool | Method | Path | Price | Description |
 |---|---|---|---|---|
-| `seo_audit_page` | GET | `/api/audit` | $0.02 | Full SEO audit of a single URL |
-| `seo_audit_batch` | POST | `/api/audit/batch` | $0.15 | SEO audit of up to 10 URLs in batch |
+| `seo_audit_page` | GET | `/api/audit` | $0.06 | Full SEO audit of a single URL |
+| `seo_audit_batch` | POST | `/api/audit/batch` | $0.40 | SEO audit of up to 10 URLs in batch |
 
 ### `seo_audit_page`
 
