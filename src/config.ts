@@ -9,7 +9,7 @@ export const API_CONFIG: ApiConfig = {
     {
       method: "GET",
       path: "/api/audit",
-      price: "$0.02",
+      price: "$0.06",
       description: "Full SEO audit of a single URL",
       toolName: "seo_audit_page",
       toolDescription: `Use this when you need to analyze a webpage's on-page SEO health. Returns a structured JSON audit with score 0-100 and prioritized recommendations.
@@ -78,7 +78,7 @@ Do NOT use for content extraction -- use web_scrape_to_markdown instead. Do NOT 
     {
       method: "POST",
       path: "/api/audit/batch",
-      price: "$0.15",
+      price: "$0.40",
       description: "SEO audit of up to 10 URLs in batch",
       toolName: "seo_audit_batch",
       toolDescription: `Use this when you need to compare SEO health across multiple pages at once (up to 10 URLs). Returns the same full audit as seo_audit_page for each URL in a single call.
